@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolarGo — Platform Pintar & Mandiri PLTS Atap</title>
+  
+    <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://fonts.googleapis.com;">
+  
+  <!-- Font Modern Geometris: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Custom Config -->
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="selection:bg-sage-100 selection:text-sage-800">
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-40 bg-[#F8F7F4]/90 backdrop-blur-md border-b border-mutedborder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-sage-500 text-white flex items-center justify-center shadow-sm group-hover:bg-sage-600 transition-gentle">
+          <i data-lucide="sun-medium" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="text-xl font-bold tracking-tight text-charcoal-900">Solar<span class="text-sage-600">Go</span></span>
+          <span class="block text-[10px] uppercase tracking-wider font-semibold text-charcoal-400">Zero-Export Engine</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-charcoal-600">
+        <a href="#kalkulator" class="hover:text-sage-600 transition-colors">Simulasi Mandiri</a>
+        <a href="#cara-kerja" class="hover:text-sage-600 transition-colors">Fisika Surya & Regulasi</a>
+        <a href="#marketplace" class="hover:text-sage-600 transition-colors">Tender Kontraktor EPC</a>
+        <a href="#faq" class="hover:text-sage-600 transition-colors">Edukasi Regulasi</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <button data-action="open-consultation" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-sage-700 bg-sage-50 hover:bg-sage-100 border border-sage-200 transition-gentle">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+          Konsultasi Ahli (Rp125k)
+        </button>
+        <a href="#kalkulator" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-sage-600 hover:bg-sage-700 shadow-sm transition-gentle">
+          Mulai Kalkulasi
+          <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-20 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sage-100/70 text-sage-700 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-sage-500 animate-ping"></span>
+            Diperbarui untuk Permen ESDM No. 2/2024 (Skema Mandiri)
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-charcoal-900 leading-[1.15]">
+            Investasi PLTS Atap <br/>
+            <span class="text-sage-600 font-normal italic">tanpa rasa cemas</span> dan tebak-tebakan.
+          </h1>
+
+          <p class="text-base sm:text-lg text-charcoal-600 max-w-2xl leading-relaxed">
+            Tanpa lagi skema <em>net-metering</em>, efisiensi surya ditentukan oleh keselarasan konsumsi siang (*self-consumption*). SolarGo memodelkan sudut matahari, suhu sel modul, dan kurva beban Anda dalam hitungan detik.
+          </p>
+
+          <div class="pt-2 flex flex-wrap items-center gap-6 text-xs text-charcoal-600">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-sage-600"></i>
+              <span>Validasi NASA POWER & BMKG</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-sage-600"></i>
+              <span>Mitra EPC Berizin IUJPTL</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="cpu" class="w-4 h-4 text-sage-600"></i>
+              <span>Algoritma Zero-Export</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual Card (Simulated Cinematic Photography) -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-white p-4 rounded-3xl border border-mutedborder shadow-sm">
+            <!-- Simulated warm-tone solar installation visual -->
+            <div class="relative h-72 w-full rounded-2xl overflow-hidden bg-gradient-to-tr from-[#38433E] via-[#5C6E64] to-[#B0A795] flex flex-col justify-between p-6 text-white">
+              <div class="flex justify-between items-start">
+                <span class="px-3 py-1 bg-black/30 backdrop-blur-md rounded-full text-[11px] font-medium tracking-wide">
+                  Model Residensial Tropis
+                </span>
+                <div class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+                  <i data-lucide="sparkles" class="w-4 h-4 text-sunwarm"></i>
+                </div>
+              </div>
+
+              <div>
+                <p class="text-xs text-white/80 font-normal">Iradiasi Rata-rata Indonesia</p>
+                <div class="text-3xl font-bold tracking-tight text-white mt-1">4.72 <span class="text-sm font-normal text-white/80">kWh / m² / hari</span></div>
+                <div class="mt-3 flex items-center gap-3 text-[11px] text-white/90">
+                  <span class="flex items-center gap-1"><i data-lucide="sun" class="w-3.5 h-3.5 text-sunwarm"></i> 4.2 Jam Puncak (PSH)</span>
+                  <span>•</span>
+                  <span>Derating Suhu: -0.35%/°C</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini trust quote -->
+            <div class="mt-4 px-2 flex items-center justify-between text-xs text-charcoal-600">
+              <span class="font-medium text-charcoal-800">Menghindari Oversizing Sistem</span>
+              <span class="text-sage-600 font-semibold">100% Layman-Centric</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MAIN CALCULATOR SECTION ==================== -->
+  <section id="kalkulator" class="py-16 bg-[#F4F4F0] border-y border-mutedborder">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title -->
+      <div class="max-w-3xl mb-12">
+        <h2 class="text-xs uppercase tracking-widest font-bold text-sage-600 mb-2">Modul Simulasi Interaktif</h2>
+        <h3 class="text-3xl font-extrabold tracking-tight text-charcoal-900">Hitung Potensi & ROI PLTS Anda</h3>
+        <p class="mt-2 text-sm sm:text-base text-charcoal-600">
+          Ubah parameter bangunan Anda. Mesin kami akan menyesuaikan sudut kemiringan optimal, temperatur kerja modul, serta regulasi tanpa ekspor listrik ke jaringan.
+        </p>
+      </div>
+
+      <!-- Main Layout: Inputs (Left) and Results (Right) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- ================= INPUT FORMS (5 COLUMNS) ================= -->
+        <div class="lg:col-span-5 bg-cardbg rounded-3xl p-6 sm:p-8 border border-mutedborder shadow-sm space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-mutedborder">
+            <h4 class="font-bold text-charcoal-900 text-base flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4 text-sage-600"></i>
+              Parameter Bangunan & Daya
+            </h4>
+            <span class="text-xs bg-sage-50 text-sage-700 px-2.5 py-1 rounded-full font-semibold">Langkah 1 dari 2</span>
+          </div>
+
+          <!-- Input 1: Lokasi Wilayah (Solar Coordinates) -->
+          <div>
+            <label class="block text-xs font-bold text-charcoal-800 uppercase tracking-wider mb-2">
+              Lokasi Bangunan (Data Radiasi)
+            </label>
+            <div class="relative">
+              <select id="inputLocation" data-simulate class="w-full bg-warmbg border border-mutedborder rounded-xl px-4 py-3 text-sm text-charcoal-800 focus:outline-none focus:ring-2 focus:ring-sage-500 font-medium cursor-pointer">
+                <option value="jakarta" selected>DKI Jakarta (Lat: -6.2° | 4.65 kWh/m²/hari)</option>
+                <option value="surabaya">Surabaya, Jatim (Lat: -7.2° | 4.90 kWh/m²/hari)</option>
+                <option value="bali">Denpasar, Bali (Lat: -8.6° | 5.05 kWh/m²/hari)</option>
+                <option value="bandung">Bandung, Jabar (Lat: -6.9° | 4.35 kWh/m²/hari)</option>
+                <option value="medan">Medan, Sumut (Lat: +3.5° | 4.45 kWh/m²/hari)</option>
+                <option value="makassar">Makassar, Sulsel (Lat: -5.1° | 4.85 kWh/m²/hari)</option>
+              </select>
+              <i data-lucide="map-pin" class="w-4 h-4 text-charcoal-400 absolute right-4 top-3.5 pointer-events-none"></i>
+            </div>
+            <p class="text-[11px] text-charcoal-400 mt-1">Mengintegrasikan data spektral rata-rata BMKG & NASA POWER.</p>
+          </div>
+
+          <!-- Input 2: Golongan & Daya Tersambung PLN -->
+          <div>
+            <label class="block text-xs font-bold text-charcoal-800 uppercase tracking-wider mb-2">
+              Daya Tersambung PLN (VA)
+            </label>
+            <div class="grid grid-cols-3 gap-2">
+              <label class="border border-mutedborder rounded-xl p-2.5 text-center cursor-pointer hover:border-sage-500 transition-gentle has-[:checked]:bg-sage-50 has-[:checked]:border-sage-600">
+                <input type="radio" name="plnCapacity" value="2200" class="sr-only" data-simulate>
+                <span class="block text-xs font-bold text-charcoal-800">2.200 VA</span>
+                <span class="block text-[10px] text-charcoal-400">R-1 Rumah</span>
+              </label>
+
+              <label class="border border-mutedborder rounded-xl p-2.5 text-center cursor-pointer hover:border-sage-500 transition-gentle has-[:checked]:bg-sage-50 has-[:checked]:border-sage-600">
+                <input type="radio" name="plnCapacity" value="4400" checked class="sr-only" data-simulate>
+                <span class="block text-xs font-bold text-charcoal-800">4.400 VA</span>
+                <span class="block text-[10px] text-charcoal-400">R-2 Rumah</span>
+              </label>
+
+              <label class="border border-mutedborder rounded-xl p-2.5 text-center cursor-pointer hover:border-sage-500 transition-gentle has-[:checked]:bg-sage-50 has-[:checked]:border-sage-600">
+                <input type="radio" name="plnCapacity" value="10500" class="sr-only" data-simulate>
+                <span class="block text-xs font-bold text-charcoal-800">10.500 VA</span>
+                <span class="block text-[10px] text-charcoal-400">R-3 / B-2 Usaha</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Input 3: Rata-rata Tagihan Listrik Per Bulan -->
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-xs font-bold text-charcoal-800 uppercase tracking-wider">
+                Rata-rata Tagihan PLN Bulanan
+              </label>
+              <span id="billDisplay" class="text-sm font-extrabold text-sage-700 bg-sage-50 px-2.5 py-0.5 rounded-md">Rp 2.500.000</span>
+            </div>
+            <input type="range" id="inputBill" min="500000" max="15000000" step="250000" value="2500000" data-simulate class="w-full h-2 bg-mutedborder rounded-lg cursor-pointer">
+            <div class="flex justify-between text-[11px] text-charcoal-400 mt-1">
+              <span>Rp 500 Ribu</span>
+              <span>Rp 7.5 Juta</span>
+              <span>Rp 15 Juta+</span>
+            </div>
+          </div>
+
+          <!-- Input 4: Luas Area Atap Bersih & Material -->
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-charcoal-800 uppercase tracking-wider mb-2">
+                Luas Atap (m²)
+              </label>
+              <div class="relative">
+                <input type="number" id="inputRoofArea" value="45" min="10" max="500" data-simulate class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2.5 text-sm font-semibold text-charcoal-800 focus:outline-none focus:ring-2 focus:ring-sage-500">
+                <span class="absolute right-3 top-2.5 text-xs text-charcoal-400 font-medium">m²</span>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-charcoal-800 uppercase tracking-wider mb-2">
+                Material Atap
+              </label>
+              <select id="inputRoofType" data-simulate class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2.5 text-xs font-semibold text-charcoal-800 focus:outline-none focus:ring-2 focus:ring-sage-500 cursor-pointer">
+                <option value="genteng">Genteng Keramik</option>
+                <option value="galvalum" selected>Galvalum / Spandek</option>
+                <option value="dak">Dak Beton Datar</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Input 5: Profil Beban / Jam Operasional (Permen ESDM 2/2024 optimization) -->
+          <div>
+            <label class="block text-xs font-bold text-charcoal-800 uppercase tracking-wider mb-2">
+              Pola Penggunaan Listrik Harian
+            </label>
+            <div class="space-y-2">
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-mutedborder cursor-pointer hover:bg-warmbg transition-gentle has-[:checked]:border-sage-600 has-[:checked]:bg-sage-50/60">
+                <input type="radio" name="profileLoad" value="day" checked data-simulate class="text-sage-600 focus:ring-sage-500">
+                <div>
+                  <span class="text-xs font-bold text-charcoal-800 block">Dominan Siang (Kantor / WFH / Bisnis)</span>
+                  <span class="text-[11px] text-charcoal-500 block">Ideal untuk skema Zero-Export (Self-consumption ~85%)</span>
+                </div>
+              </label>
+
+              <label class="flex items-center gap-3 p-3 rounded-xl border border-mutedborder cursor-pointer hover:bg-warmbg transition-gentle has-[:checked]:border-sage-600 has-[:checked]:bg-sage-50/60">
+                <input type="radio" name="profileLoad" value="night" data-simulate class="text-sage-600 focus:ring-sage-500">
+                <div>
+                  <span class="text-xs font-bold text-charcoal-800 block">Dominan Malam (Keluarga Bekerja Luar)</span>
+                  <span class="text-[11px] text-charcoal-500 block">Dianjurkan menggunakan modul BESS (Baterai Litium)</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Mini calculation status indicator -->
+          <div class="pt-2 flex items-center justify-between text-xs text-charcoal-400 border-t border-mutedborder">
+            <span class="flex items-center gap-1.5 text-sage-700">
+              <span class="w-2 h-2 rounded-full bg-sage-500"></span>
+              Mesin kalkulasi fisika sinkron
+            </span>
+            <button data-action="recalc" class="text-xs text-sage-700 hover:text-sage-800 underline font-semibold">
+              Kalkulasi Ulang
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ================= RESULTS DASHBOARD (7 COLUMNS) ================= -->
+        <div class="lg:col-span-7 space-y-6">
+
+          <!-- Core Summary Banner -->
+          <div class="bg-cardbg rounded-3xl p-6 sm:p-8 border border-mutedborder shadow-sm">
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-mutedborder">
+              <div>
+                <span class="text-xs font-semibold text-charcoal-400 uppercase tracking-wider block">Estimasi Penghematan Anda</span>
+                <div class="text-3xl sm:text-4xl font-extrabold text-charcoal-900 mt-1">
+                  <span id="resMonthlySaving" class="text-sage-600">Rp 1.480.000</span>
+                  <span class="text-xs sm:text-sm font-medium text-charcoal-500">/ bulan</span>
+                </div>
+              </div>
+              <div class="bg-sage-50 border border-sage-200 px-4 py-2 rounded-2xl text-right">
+                <span class="text-[11px] font-semibold text-sage-700 block">Penurunan Tagihan</span>
+                <span id="resSavingPercentage" class="text-lg font-bold text-sage-800">- 59.2%</span>
+              </div>
+            </div>
+
+            <!-- Key Metric Cards Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-6">
+              
+              <!-- Metric 1: System Size -->
+              <div class="p-4 rounded-2xl bg-warmbg border border-mutedborder">
+                <div class="flex items-center gap-2 text-charcoal-500 mb-1">
+                  <i data-lucide="zap" class="w-4 h-4 text-sunwarm"></i>
+                  <span class="text-xs font-semibold">Kapasitas PV</span>
+                </div>
+                <div id="resKwp" class="text-xl sm:text-2xl font-bold text-charcoal-900">3.85 <span class="text-xs font-normal">kWp</span></div>
+                <p id="resModuleCount" class="text-[11px] text-charcoal-500 mt-1">7 Panel Monokristalin 550Wp</p>
+              </div>
+
+              <!-- Metric 2: Payback Period -->
+              <div class="p-4 rounded-2xl bg-warmbg border border-mutedborder">
+                <div class="flex items-center gap-2 text-charcoal-500 mb-1">
+                  <i data-lucide="hourglass" class="w-4 h-4 text-sage-600"></i>
+                  <span class="text-xs font-semibold">Balik Modal</span>
+                </div>
+                <div id="resPayback" class="text-xl sm:text-2xl font-bold text-charcoal-900">4.6 <span class="text-xs font-normal">Tahun</span></div>
+                <p class="text-[11px] text-charcoal-500 mt-1">Garansi Modul 25 Tahun</p>
+              </div>
+
+              <!-- Metric 3: Carbon Offset -->
+              <div class="p-4 rounded-2xl bg-warmbg border border-mutedborder col-span-2 sm:col-span-1">
+                <div class="flex items-center gap-2 text-charcoal-500 mb-1">
+                  <i data-lucide="leaf" class="w-4 h-4 text-sage-600"></i>
+                  <span class="text-xs font-semibold">Reduksi Emisi</span>
+                </div>
+                <div id="resCarbon" class="text-xl sm:text-2xl font-bold text-charcoal-900">4.1 <span class="text-xs font-normal">Ton CO₂e/th</span></div>
+                <p class="text-[11px] text-charcoal-500 mt-1">Setara 188 bibit pohon</p>
+              </div>
+
+            </div>
+
+            <!-- Investment & Lifetime value -->
+            <div class="mt-6 pt-5 border-t border-mutedborder flex flex-wrap items-center justify-between gap-4 text-xs">
+              <div>
+                <span class="text-charcoal-400">Estimasi Biaya Investasi EPC Turnkey:</span>
+                <span id="resCapex" class="font-bold text-charcoal-800 ml-1">Rp 48.000.000 - Rp 54.000.000</span>
+              </div>
+              <div>
+                <span class="text-charcoal-400">Total Hemat 25 Tahun:</span>
+                <span id="resLifetimeSavings" class="font-bold text-sage-700 ml-1">Rp 444.000.000</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Visual Curve: 24-Hour Load vs Solar Generation (Zero-Export Modeling) -->
+          <div class="bg-cardbg rounded-3xl p-6 sm:p-8 border border-mutedborder shadow-sm">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h5 class="text-sm font-bold text-charcoal-900">Profil Sinkronisasi Energi 24 Jam</h5>
+                <p class="text-xs text-charcoal-500">Kesesuaian kurva produksi surya dengan beban konsumsi (Zero-Export)</p>
+              </div>
+              <div class="flex items-center gap-3 text-[11px] font-semibold">
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-sunwarm"></span> Produksi PV</span>
+                <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-charcoal-400"></span> Beban Bangunan</span>
+              </div>
+            </div>
+
+            <!-- SVG 24h Chart with Soft Gradients -->
+            <div class="relative w-full h-44 bg-warmbg rounded-2xl p-3 border border-mutedborder overflow-hidden">
+              <svg class="w-full h-full" viewBox="0 0 500 150" preserveAspectRatio="none">
+                <defs>
+                  <!-- Solar Area Gradient -->
+                  <linearGradient id="solarGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#E8B35A" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#E8B35A" stop-opacity="0.0"/>
+                  </linearGradient>
+                  <!-- Load Gradient -->
+                  <linearGradient id="loadGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4E7D63" stop-opacity="0.2"/>
+                    <stop offset="100%" stop-color="#4E7D63" stop-opacity="0.0"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Grid lines -->
+                <line x1="0" y1="35" x2="500" y2="35" stroke="#E8E6DF" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="0" y1="75" x2="500" y2="75" stroke="#E8E6DF" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="0" y1="115" x2="500" y2="115" stroke="#E8E6DF" stroke-width="1" stroke-dasharray="4"/>
+
+                <!-- Dynamic Solar Bell Curve Area & Stroke -->
+                <path id="svgSolarArea" d="M 120 135 C 180 135, 210 25, 250 25 C 290 25, 320 135, 380 135 Z" fill="url(#solarGradient)"></path>
+                <path id="svgSolarLine" d="M 120 135 C 180 135, 210 25, 250 25 C 290 25, 320 135, 380 135" fill="none" stroke="#E8B35A" stroke-width="2.5" stroke-linecap="round"></path>
+
+                <!-- Dynamic Building Load Line -->
+                <path id="svgLoadArea" d="M 0 110 Q 120 100, 200 65 T 320 65 T 500 105 L 500 135 L 0 135 Z" fill="url(#loadGradient)"></path>
+                <path id="svgLoadLine" d="M 0 110 Q 120 100, 200 65 T 320 65 T 500 105" fill="none" stroke="#3D654F" stroke-width="2" stroke-linecap="round"></path>
+              </svg>
+
+              <!-- Timeline labels -->
+              <div class="absolute bottom-1 left-4 right-4 flex justify-between text-[9px] font-semibold text-charcoal-400">
+                <span>00:00</span>
+                <span>06:00 (Matahari Terbit)</span>
+                <span>12:00 (Puncak Iradiasi)</span>
+                <span>18:00 (Matahari Terbenam)</span>
+                <span>23:59</span>
+              </div>
+            </div>
+
+            <!-- Zero export status pill -->
+            <div class="mt-3 flex items-center justify-between text-xs text-charcoal-600 bg-warmbg p-3 rounded-xl border border-mutedborder">
+              <span class="flex items-center gap-2">
+                <i data-lucide="check" class="w-4 h-4 text-sage-600"></i>
+                <span id="zeroExportText">Efisiensi Serapan Mandiri: <strong>82% Terkonsumsi Langsung</strong></span>
+              </span>
+              <span id="bessBadge" class="text-[11px] font-semibold text-sage-700 bg-sage-100 px-2 py-0.5 rounded-md">BESS Opsional</span>
+            </div>
+          </div>
+
+          <!-- Progressive Disclosure: Expandable Scientific Physics Breakdown -->
+          <div class="bg-cardbg rounded-3xl border border-mutedborder shadow-sm overflow-hidden transition-gentle">
+            <button data-action="toggle-science" class="w-full p-5 flex items-center justify-between text-left hover:bg-warmbg transition-gentle">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-sage-50 text-sage-700 flex items-center justify-center">
+                  <i data-lucide="binary" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <h6 class="text-sm font-bold text-charcoal-900">Lihat Parameter Fisika Surya & Matematika (Core Engine)</h6>
+                  <p class="text-xs text-charcoal-400">Detail deklinasi matahari (δ), Air Mass (AM), dan derating suhu sel</p>
+                </div>
+              </div>
+              <i id="toggleChevron" data-lucide="chevron-down" class="w-5 h-5 text-charcoal-400 transition-transform"></i>
+            </button>
+
+            <!-- Collapsible Body -->
+            <div id="scientificDetailsBody" class="hidden px-6 pb-6 pt-2 border-t border-mutedborder space-y-4 text-xs text-charcoal-600">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                
+                <div class="p-3.5 rounded-xl bg-warmbg border border-mutedborder">
+                  <div class="font-bold text-charcoal-800 mb-1">Geometri Surya & Atmosfer</div>
+                  <ul class="space-y-1 font-mono text-[11px]">
+                    <li>• Sudut Deklinasi (δ): <span id="mathDeclination" class="font-bold text-sage-700">-12.8°</span></li>
+                    <li>• Penyerapan Spektral (Air Mass): <span id="mathAirMass" class="font-bold text-sage-700">1.08 AM</span></li>
+                    <li>• Sudut Zenith Optimal: <span class="font-bold text-sage-700">10° - 15° (Hadap Utara/Selatan)</span></li>
+                  </ul>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-warmbg border border-mutedborder">
+                  <div class="font-bold text-charcoal-800 mb-1">Penyesuaian Temperatur Modul</div>
+                  <ul class="space-y-1 font-mono text-[11px]">
+                    <li>• Suhu Sel Kerja ($T_{sel}$): <span id="mathCellTemp" class="font-bold text-clay">47.4°C</span></li>
+                    <li>• Koefisien Daya ($\gamma_{Pmax}$): <span class="font-bold">-0.35% / °C</span></li>
+                    <li>• Faktor Rugi Panas: <span id="mathDeratingLoss" class="font-bold text-clay">-7.84% vs STC</span></li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Recommendation Hardware -->
+              <div class="p-3.5 rounded-xl bg-sage-50/70 border border-sage-200">
+                <span class="font-bold text-sage-800 block mb-1">Rekomendasi Spesifikasi Perangkat Keras:</span>
+                <p class="text-charcoal-600 text-[11px] leading-relaxed">
+                  Modul fotovoltaik <strong>Monocrystalline Half-Cut Tier-1 (550 Wp)</strong>, dipadukan dengan <strong>Smart String Inverter Zero-Export Ready</strong> dengan rasio DC/AC <strong>1.20</strong> untuk memaksimalkan yield pada kondisi berawan tanpa melanggar batasan arus ke transformator PLN.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EPC TENDER / MARKETPLACE ==================== -->
+  <section id="marketplace" class="py-20 bg-warmbg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-sage-600 mb-2 block">Ekosistem Instalasi Terverifikasi</span>
+          <h2 class="text-3xl font-extrabold tracking-tight text-charcoal-900">Tender Kontraktor EPC Resmi</h2>
+          <p class="text-sm text-charcoal-600 mt-2 max-w-xl">
+            Hindari vendor tak berizin. Kami hanya menghubungkan Anda dengan kontraktor yang mengantongi sertifikasi <strong>IUJPTL</strong> & tenaga ahli ber-<strong>SKTTK</strong> resmi Kementerian ESDM.
+          </p>
+        </div>
+        <div>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-mutedborder text-xs text-charcoal-600 font-medium shadow-sm">
+            <i data-lucide="check-check" class="w-4 h-4 text-sage-600"></i>
+            Perbandingan Transparan Tanpa Mark-up Tersembunyi
+          </span>
+        </div>
+      </div>
+
+      <!-- EPC Vendor Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- EPC Card 1 -->
+        <div class="bg-cardbg rounded-3xl p-6 border border-mutedborder shadow-sm hover:shadow-md transition-gentle flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-sage-600 bg-sage-50 px-2 py-0.5 rounded-md">Tier-1 EPC Partner</span>
+                <h3 class="text-lg font-bold text-charcoal-900 mt-2">Nusantara Surya Perkasa</h3>
+              </div>
+              <div class="flex items-center text-xs font-bold text-charcoal-800 gap-1 bg-warmbg px-2 py-1 rounded-lg">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-sunwarm text-sunwarm"></i> 4.9
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-2 text-xs text-charcoal-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-sage-600"></i>
+                <span>IUJPTL: 0220102931298</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-sage-600"></i>
+                <span>Garansi Pemasangan 5 Tahun</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="wrench" class="w-4 h-4 text-sage-600"></i>
+                <span>Tier-1 Jinko / Huawei Inverter</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-mutedborder">
+              <span class="text-[11px] text-charcoal-400 block">Indikasi Penawaran DED</span>
+              <div class="text-lg font-extrabold text-charcoal-900">Rp 12.800.000 <span class="text-xs font-normal text-charcoal-500">/ kWp</span></div>
+            </div>
+          </div>
+
+          <button data-action="open-tender" data-vendor="Nusantara Surya Perkasa" class="mt-6 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-sage-600 hover:bg-sage-700 transition-gentle">
+            Minta DED & Penawaran
+          </button>
+        </div>
+
+        <!-- EPC Card 2 (Recommended) -->
+        <div class="bg-cardbg rounded-3xl p-6 border-2 border-sage-500 shadow-md relative flex flex-col justify-between">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-sage-600 text-white text-[10px] uppercase font-bold tracking-wider rounded-full shadow-sm">
+            Rekomendasi Efisiensi
+          </div>
+
+          <div>
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-sage-600 bg-sage-50 px-2 py-0.5 rounded-md">Tier-1 EPC Partner</span>
+                <h3 class="text-lg font-bold text-charcoal-900 mt-2">Energi Surya Mandiri (ESM)</h3>
+              </div>
+              <div class="flex items-center text-xs font-bold text-charcoal-800 gap-1 bg-warmbg px-2 py-1 rounded-lg">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-sunwarm text-sunwarm"></i> 4.95
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-2 text-xs text-charcoal-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-sage-600"></i>
+                <span>IUJPTL & SKTTK ESDM Level 4</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-sage-600"></i>
+                <span>Free Pembersihan Modul 1 Tahun</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="wrench" class="w-4 h-4 text-sage-600"></i>
+                <span>Tier-1 LONGi / Sungrow Inverter</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-mutedborder">
+              <span class="text-[11px] text-charcoal-400 block">Indikasi Penawaran DED</span>
+              <div class="text-lg font-extrabold text-charcoal-900">Rp 12.450.000 <span class="text-xs font-normal text-charcoal-500">/ kWp</span></div>
+            </div>
+          </div>
+
+          <button data-action="open-tender" data-vendor="Energi Surya Mandiri (ESM)" class="mt-6 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-sage-600 hover:bg-sage-700 shadow-sm transition-gentle">
+            Minta DED & Penawaran
+          </button>
+        </div>
+
+        <!-- EPC Card 3 -->
+        <div class="bg-cardbg rounded-3xl p-6 border border-mutedborder shadow-sm hover:shadow-md transition-gentle flex flex-col justify-between">
+          <div>
+            <div class="flex items-start justify-between">
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-sage-600 bg-sage-50 px-2 py-0.5 rounded-md">Spesialis B2B & Komersial</span>
+                <h3 class="text-lg font-bold text-charcoal-900 mt-2">Daya Cipta Solar</h3>
+              </div>
+              <div class="flex items-center text-xs font-bold text-charcoal-800 gap-1 bg-warmbg px-2 py-1 rounded-lg">
+                <i data-lucide="star" class="w-3.5 h-3.5 fill-sunwarm text-sunwarm"></i> 4.8
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-2 text-xs text-charcoal-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="award" class="w-4 h-4 text-sage-600"></i>
+                <span>IUJPTL Nasional Grade 5</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-sage-600"></i>
+                <span>Integrasi Monitoring IoT 24/7</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="wrench" class="w-4 h-4 text-sage-600"></i>
+                <span>Tier-1 Trina Solar / Growatt</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-mutedborder">
+              <span class="text-[11px] text-charcoal-400 block">Indikasi Penawaran DED</span>
+              <div class="text-lg font-extrabold text-charcoal-900">Rp 12.950.000 <span class="text-xs font-normal text-charcoal-500">/ kWp</span></div>
+            </div>
+          </div>
+
+          <button data-action="open-tender" data-vendor="Daya Cipta Solar" class="mt-6 w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-sage-600 hover:bg-sage-700 transition-gentle">
+            Minta DED & Penawaran
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Expert Consultation Highlight -->
+      <div class="mt-12 bg-white rounded-3xl p-8 border border-mutedborder flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="flex items-center gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-sage-100 text-sage-700 flex items-center justify-center shrink-0">
+            <i data-lucide="user-check" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-bold text-charcoal-900">Butuh Evaluasi Independen Bersama Lead Engineer?</h4>
+            <p class="text-xs sm:text-sm text-charcoal-600 mt-1">
+              Konsultasikan kelayakan rangka atap, simulasi bayangan (*shading analysis*), dan validasi penawaran EPC pihak ketiga. Sesi 45 menit bebas bias vendor.
+            </p>
+          </div>
+        </div>
+
+        <button data-action="open-consultation" class="shrink-0 px-6 py-3 rounded-xl text-xs font-bold text-sage-800 bg-sage-100 hover:bg-sage-200 border border-sage-300 transition-gentle">
+          Jadwalkan Sesi (Rp125.000)
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FAQ & REGULASI ==================== -->
+  <section id="faq" class="py-16 bg-[#F4F4F0] border-t border-mutedborder">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest font-bold text-sage-600 mb-1 block">Regulasi Terkini</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-charcoal-900">Memahami Permen ESDM No. 2/2024</h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-cardbg rounded-2xl p-5 border border-mutedborder">
+          <h4 class="text-sm font-bold text-charcoal-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-sage-600"></i>
+            Mengapa tidak ada lagi skema Net-Metering (jual-beli listrik ke PLN)?
+          </h4>
+          <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+            Pemerintah melalui Permen ESDM 2/2024 menghapus skema ekspor listrik ke PLN untuk menjaga kestabilan jaringan transmisi (*grid stability*). Listrik yang diekspor tidak lagi dihitung sebagai pengurang tagihan. Karenanya, sistem SolarGo mengoptimalkan kapasitas sistem agar 100% daya surya terserap langsung oleh beban rumah tangga/gedung Anda.
+          </p>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl p-5 border border-mutedborder">
+          <h4 class="text-sm font-bold text-charcoal-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-sage-600"></i>
+            Apakah ada kuota kapasitas pemasangan PLTS Atap?
+          </h4>
+          <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+            Ya, kuota pengembangan sistem PLTS Atap dialokasikan oleh PLN setiap 5 tahun dan dievaluasi tahunan. Mengajukan permohonan melalui kontraktor EPC berizin resmi yang terafiliasi di SolarGo memastikan alokasi kuota Anda terdaftar secara sah di sistem PLN UID/UP3 setempat.
+          </p>
+        </div>
+
+        <div class="bg-cardbg rounded-2xl p-5 border border-mutedborder">
+          <h4 class="text-sm font-bold text-charcoal-900 flex items-center gap-2">
+            <i data-lucide="help-circle" class="w-4 h-4 text-sage-600"></i>
+            Kapan saya membutuhkan baterai litium (BESS)?
+          </h4>
+          <p class="text-xs text-charcoal-600 mt-2 leading-relaxed">
+            Jika beban pemakaian listrik Anda lebih dari 65% terjadi pada malam hari (seperti AC sentral menyala semalaman sementara siang hari rumah kosong), penambahan modul baterai litium disarankan agar daya surya yang dipanen siang hari dapat disimpan untuk malam hari.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-charcoal-900 text-white py-14 border-t border-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        
+        <div class="space-y-3 md:col-span-1">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-sage-500 text-white flex items-center justify-center font-bold">
+              <i data-lucide="sun-medium" class="w-5 h-5"></i>
+            </div>
+            <span class="text-lg font-bold">Solar<span class="text-sage-400">Go</span></span>
+          </div>
+          <p class="text-xs text-charcoal-400 leading-relaxed">
+            Platform independen transisi energi bersih. Membantu masyarakat dan bisnis menghitung kelayakan PLTS Atap secara saintifik dan objektif.
+          </p>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-wider text-charcoal-400 mb-3">Model Fisika</h5>
+          <ul class="text-xs text-charcoal-400 space-y-2">
+            <li>Kalkulasi Sudut Deklinasi</li>
+            <li>Lintasan Spektral Air Mass</li>
+            <li>Derating Suhu Modul Pmax</li>
+            <li>Zero-Export Self Balancing</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-wider text-charcoal-400 mb-3">Kemitraan</h5>
+          <ul class="text-xs text-charcoal-400 space-y-2">
+            <li>Registrasi Vendor EPC (IUJPTL)</li>
+            <li>Verifikasi Sertifikasi SKTTK</li>
+            <li>Portal Mitra OEM & Inverter</li>
+            <li>Standar DED Kelayakan</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="text-xs font-bold uppercase tracking-wider text-charcoal-400 mb-3">Keamanan & Kepatuhan</h5>
+          <p class="text-xs text-charcoal-400 mb-3">
+            Data koordinat geospasial dan tagihan listrik Anda dilindungi dengan enkripsi end-to-end SSL dan kepatuhan privasi data.
+          </p>
+          <span class="inline-flex items-center gap-1.5 text-[11px] text-sage-400">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> SSL 256-Bit Encrypted
+          </span>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-charcoal-800 flex flex-col sm:flex-row items-center justify-between text-xs text-charcoal-400 gap-4">
+        <div>&copy; 2026 SolarGo Platform Indonesia. Sesuai Permen ESDM No. 2 Tahun 2024.</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-white transition-colors">Ketentuan Layanan</a>
+          <a href="#" class="hover:text-white transition-colors">Metodologi Perhitungan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: KONSULTASI LEAD ENGINEER ==================== -->
+  <div id="modalConsultation" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-cardbg rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-mutedborder shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-mutedborder">
+        <div>
+          <h3 class="text-lg font-bold text-charcoal-900">Konsultasi Independen Lead Engineer</h3>
+          <p class="text-xs text-charcoal-500">Sesi 45 menit review DED & kalkulasi struktural atap</p>
+        </div>
+        <button data-action="close-consultation" class="w-8 h-8 rounded-full bg-warmbg flex items-center justify-center text-charcoal-400 hover:text-charcoal-800">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs text-charcoal-700">
+        <div class="p-3 bg-sage-50 rounded-xl border border-sage-200 flex items-center justify-between">
+          <span class="font-medium text-sage-800">Biaya Sesi Teknis:</span>
+          <span class="font-bold text-sage-900 text-sm">Rp 125.000 / sesi</span>
+        </div>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">Nama Lengkap</label>
+          <input type="text" placeholder="Budi Santoso" class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+        </div>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">Nomor WhatsApp</label>
+          <input type="tel" placeholder="0812XXXXXXXX" class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+        </div>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">Pilih Jadwal Konsultasi</label>
+          <select class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+            <option>Besok — 10:00 WIB (Online Zoom)</option>
+            <option>Besok — 14:00 WIB (Online Zoom)</option>
+            <option>Lusa — 19:30 WIB (Online Zoom)</option>
+          </select>
+        </div>
+      </div>
+
+      <button data-action="confirm-booking" class="w-full py-3 rounded-xl text-xs font-bold text-white bg-sage-600 hover:bg-sage-700 transition-gentle shadow-sm">
+        Lanjut ke Pembayaran Aman (Rp125.000)
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: PERMINTAAN TENDER EPC ==================== -->
+  <div id="modalTender" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-cardbg rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-mutedborder shadow-xl space-y-5">
+      <div class="flex items-center justify-between pb-3 border-b border-mutedborder">
+        <div>
+          <h3 class="text-lg font-bold text-charcoal-900">Minta DED & Quotation Resmi</h3>
+          <p id="tenderVendorName" class="text-xs text-sage-600 font-semibold">Vendor: Nusantara Surya Perkasa</p>
+        </div>
+        <button data-action="close-tender" class="w-8 h-8 rounded-full bg-warmbg flex items-center justify-center text-charcoal-400 hover:text-charcoal-800">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs text-charcoal-700">
+        <p class="text-xs text-charcoal-500">
+          Kontraktor terpilih akan menerima ringkasan spesifikasi kalkulasi Anda untuk membuatkan gambar teknis <em>Single Line Diagram (SLD)</em> dan rincian Bill of Quantities (BOQ).
+        </p>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">Nama Pemilik / PIC Bangunan</label>
+          <input type="text" placeholder="Nama Anda" class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+        </div>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">Alamat Pemasangan</label>
+          <input type="text" placeholder="Jl. Anggrek No. 12, Jakarta Selatan" class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+        </div>
+
+        <div>
+          <label class="block font-bold text-charcoal-800 uppercase tracking-wider mb-1">ID Pelanggan PLN (Opsional)</label>
+          <input type="text" placeholder="5321xxxxxxxx" class="w-full bg-warmbg border border-mutedborder rounded-xl px-3 py-2 text-xs focus:ring-2 focus:ring-sage-500">
+        </div>
+      </div>
+
+      <button data-action="confirm-tender" class="w-full py-3 rounded-xl text-xs font-bold text-white bg-sage-600 hover:bg-sage-700 transition-gentle shadow-sm">
+        Kirim Permintaan Dokumen Bebas Biaya
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== TOAST NOTIFICATION ==================== -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 bg-charcoal-900 text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-xs font-medium translate-y-24 opacity-0 transition-all duration-300">
+    <i data-lucide="check-circle" class="w-4 h-4 text-sage-400"></i>
+    <span id="toastMessage">Operasi berhasil</span>
+  </div>
+
+    <!-- ==================== EXTERNAL JS MODULES ==================== -->
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
